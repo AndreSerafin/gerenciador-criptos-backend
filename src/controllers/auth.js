@@ -19,7 +19,7 @@ exports.login = async (req, res) => {
 				},
 				process.env.TOKEN_KEY,
 				{
-					expiresIn: '24h'
+					expiresIn: process.env.TOKEN_EXPIRES_IN
 				}
 			)
 			return res.status(200).send({ token })
